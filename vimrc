@@ -1,9 +1,9 @@
-set fillchars=vert:│,fold:─
-let g:vimfiler_tree_leaf_icon = "⋮"
-let g:vimfiler_tree_opened_icon = "▼"
-let g:vimfiler_tree_closed_icon = "▷"
+" Terminal go back to normal mode
+tnoremap <Esc> <C-\><C-n>
 
-"dein Scripts-----------------------------
+" ==========================================================
+"   dein
+" ==========================================================
 if &compatible  
   set nocompatible               " Be iMproved
 endif
@@ -23,20 +23,18 @@ if dein#load_state('~/.cache/dein')
   call dein#add('Shougo/deoplete.nvim', {
         \ 'lazy': 1,
         \ 'on_i': 1})
+  call dein#add('Shougo/neosnippet-snippets', {
+        \ 'depends': 'neosnippet.vim',
+        \ 'on_i': 1})
   call dein#add('Shougo/neosnippet.vim', {
         \ 'lazy': 1,
         \ 'on_i': 1})
-  call dein#add('Shougo/neosnippet-snippets', {
-        \ 'lazy': 1,
-        \ 'depends': 'neosnippet.vim',
-        \ 'on_i': 1})
   call dein#add('Shougo/vimfiler.vim',  { 'depends': 'unite.vim' })
 
-  call dein#add('scrooloose/nerdcommenter', {'on_map': {'n': ['\cc', '\cu']}})   " commenter: \cc \cu
+  call dein#add('scrooloose/nerdcommenter', {'on_map': {'n': ['\cc', '\cu', '\c<space>']}})
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('Yggdroot/indentLine')
-  call dein#add('mileszs/ack.vim', {'on_cmd': 'Ack'})
   call dein#add('easymotion/vim-easymotion', {
       \ 'lazy': 1,
       \ 'on_map': ['<Plug>(easymotion-bd-w)']})
@@ -162,17 +160,7 @@ set laststatus=2
 " enable powerline-fonts
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
-"let g:airline_theme='wombat'
 let g:airline_theme='solarized'
-
-" UltiSnips -------------------------------------------------------- "
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-"let g:UltiSnipsExpandTrigger="<C-j>"
-"let g:UltiSnipsJumpForwardTrigger="<C-j>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" If you want :UltiSnipsEdit to split your window.
-"let g:UltiSnipsEditSplit="vertical"
 
 " indent ------------------------------------------------------------- "
 let g:indentLine_char = '┆'
@@ -188,13 +176,6 @@ let GtagsCscope_Quiet = 1
 " restructure ------------------------------------------------------- "
 let g:riv_disable_folding = 1
 let g:instant_rst_localhost_only = 1
-
-" YouCompleteMe ----------------------------------------------- "
-"let g:ycm_python_binary_path = 'python'
-"let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-"let g:ycm_show_diagnostics_ui = 0
-"let g:ycm_error_symbol = '>>'
-"let g:ycm_warning_symbol = '>*'
 
 " Python highlight --------------------------------------------- "
 augroup python
@@ -212,7 +193,7 @@ augroup end
 "unite.vim config ----------------------------------------------- "
 let g:unite_source_rec_max_cache_files = 0
 
-"let g:unite_data_directory='~/.unite/.cache/'
+let g:unite_data_directory='~/.unite/.cache/'
 "let g:unite_split_rule = "botright"
 let g:unite_source_file_rec_max_cache_files = 3000
 "let g:unite_enable_start_insert = 1
@@ -391,5 +372,11 @@ function! s:check_back_space() abort "{{{
     return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
 
+" ==========================================================
+"   vimfiler
+" ==========================================================
 let g:vimfiler_as_default_explorer = 1
-
+set fillchars=vert:│,fold:─
+let g:vimfiler_tree_leaf_icon = "⋮"
+let g:vimfiler_tree_opened_icon = "▼"
+let g:vimfiler_tree_closed_icon = "▷"
