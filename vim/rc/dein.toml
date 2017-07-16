@@ -1,0 +1,51 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# [[plugins]]
+# repo = 'godlygeek/csapprox'
+# if = "v:progname !=# 'gvim' && has('gui') && !has('nvim')"
+# hook_add = '''
+# " Convert colorscheme in Konsole.
+#  let g:CSApprox_konsole = 1
+#  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+# '''
+
+[[plugins]]
+repo = 'aceofall/gtags.vim'
+hook_add = '''
+set cscopetag
+set cscopeprg='gtags-cscope'
+let GtagsCscope_Auto_Load = 1
+let GtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = '''
+" set status line
+set laststatus=2
+" enable powerline-fonts
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_theme='solarized'
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+let g:indentLine_char = '┆'
+"let g:indentLine_color_term = 11
+'''
+
+[[plugins]]
+repo = 'Shougo/unite-outline'
+
+[[plugins]]
+repo = 'chemzqm/denite-git'

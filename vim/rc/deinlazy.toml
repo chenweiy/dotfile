@@ -1,0 +1,107 @@
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_source = '''
+let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr> <TAB>
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ deoplete#mappings#manual_complete()
+'''
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets']
+on_event = 'InsertCharPre'
+on_ft = 'snippet'
+hook_source = '''
+  imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+  xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+        \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+'''
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'neomru.vim'
+hook_source = 'source ~/.vim/rc/plugins/unite.rc.vim'
+hook_add = '''
+nnoremap <space>o :Unite outline<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+depends = 'neomru.vim'
+hook_source = 'source ~/.vim/rc/plugins/denite.rc.vim'
+hook_add = '''
+nnoremap <space>p :Denite -mode=normal file_mru file<CR>
+nnoremap <space>b :Denite -mode=normal buffer<CR>
+nnoremap <space>x :Denite -mode=normal grep<CR>
+
+'''
+
+[[plugins]]
+repo = 'Shougo/vimfiler.vim'
+depends = 'unite.vim'
+on_map = {n = '<Plug>'}
+on_if = "isdirectory(bufname('%'))"
+hook_add = 'nnoremap  <space>v   :<C-u>VimFiler -invisible<CR>'
+hook_source = '''
+let g:vimfiler_as_default_explorer = 1
+" Like Textmate icons.
+let g:vimfiler_tree_leaf_icon = ' '
+let g:vimfiler_tree_opened_icon = "▼"
+let g:vimfiler_tree_closed_icon = "▷"
+let g:vimfiler_file_icon = ' '
+let g:vimfiler_readonly_file_icon = '✗'
+let g:vimfiler_marked_file_icon = '✓'
+'''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+on_map = {n = '<Plug>(easymotion-bd-w)'}
+hook_add = 'nmap <space>w <Plug>(easymotion-bd-w)'
+
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+on_map = {n = ['\cc', '\cu', '\c<space>']}
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+on_map = {n = ['cs', 'ds', 'ys']}
+
+[[plugins]]
+repo = 'octol/vim-cpp-enhanced-highlight'
+on_ft = 'c'
+
+[[plugins]]
+repo = 'klen/python-mode'
+on_ft = 'python'
+hook_source = '''
+let g:pymode_python = 'python3'
+let g:pymode_doc = 1
+let g:pymode_doc_bind = 'K'
+let g:pymode_run = 1
+let g:pymode_run_bind = '<leader>r'
+"let g:pymode_lint_on_write = 0
+'''
+
+[[plugins]]
+repo = 'Rykka/riv.vim'
+on_ft = 'rst'
+hook_source = '''
+let g:riv_disable_folding = 1
+'''
+
+[[plugins]]
+repo = 'Rykka/InstantRst'
+on_ft = 'rst'
+hook_source = '''
+let g:riv_disable_folding = 1
+'''

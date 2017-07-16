@@ -1,0 +1,30 @@
+"---------------------------------------------------------------------------
+" Chance's .vimrc
+"---------------------------------------------------------------------------
+
+" profile start profile.txt
+" profile file ~/.vim/rc/*
+" profile func dein#*
+
+if &compatible
+  set nocompatible
+endif
+
+"---------------------------------------------------------------------------
+source ~/.vim/rc/dein.rc.vim
+source ~/.vim/rc/mappings.rc.vim
+source ~/.vim/rc/options.rc.vim
+
+if has('nvim')
+  source ~/.vim/rc/neovim.rc.vim
+endif
+
+"---------------------------------------------------------------------------
+
+" TMUX --------------------------------------------------------- "
+if !has('nvim')
+if exists('$TMUX')
+  set term=screen-256color
+endif
+endif
+
