@@ -58,3 +58,36 @@ colorscheme solarized
   "exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
 "endfunction
 
+"---------------------------------------------------------------------------
+" View:
+"
+
+" Show line number.
+"set number
+" Show <TAB> and <CR>
+"set list
+
+" Always display statusline.
+set laststatus=2
+" Height of command line.
+set cmdheight=1
+" Not show command on statusline.
+set noshowcmd
+
+" Set statusline.
+let &g:statusline=""
+      \ . "%#LineNr#"
+      \ . "\  %f"
+      \ . "%m"
+      \ . "\ %=%{(winnr('$')==1 || winnr('#')!=winnr()) ?
+      \  '['.(&filetype!=''?&filetype.',':'')"
+      \ . ".(&fenc!=''?&fenc:&enc).','.&ff.']' : ''}"
+      \ ."%#CursorColumn#"
+      \ . "%{printf('%'.(len(line('$'))+2).'d/%d',line('.'),line('$'))}"
+
+      "\ . "%{(&previewwindow?'[preview] ':'').expand('%:t')}"
+      
+" For conceal.
+set conceallevel=2 concealcursor=niv
+
+

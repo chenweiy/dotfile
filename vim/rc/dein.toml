@@ -23,19 +23,19 @@ let GtagsCscope_Quiet = 1
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
-[[plugins]]
-repo = 'vim-airline/vim-airline'
-hook_add = '''
-" set status line
-set laststatus=2
-" enable powerline-fonts
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline_theme='solarized'
-'''
+#[[plugins]]
+#repo = 'vim-airline/vim-airline'
+#hook_add = '''
+#" set status line
+#set laststatus=2
+#" enable powerline-fonts
+#let g:airline_powerline_fonts = 1
+#let g:airline#extensions#whitespace#enabled = 0
+#let g:airline_theme='solarized'
+#'''
 
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
+#[[plugins]]
+#repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
