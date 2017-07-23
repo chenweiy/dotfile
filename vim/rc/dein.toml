@@ -38,6 +38,9 @@ repo = 'Shougo/neosnippet-snippets'
 #repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = '''
 let g:indentLine_char = '┆'

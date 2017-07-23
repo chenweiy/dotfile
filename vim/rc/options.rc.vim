@@ -81,12 +81,12 @@ let &g:statusline=""
       \ ."%#CursorColumn#"
       \ . "%m"
       \ . "%#LineNr#"
-      \ . "\ %=%{(winnr('$')==1 || winnr('#')!=winnr()) ?
-      \  '['.(&filetype!=''?&filetype.',':'')"
-      \ . ".(&fenc!=''?&fenc:&enc).','.&ff.']' : ''}"
-      \ ."%#CursorColumn#"
+      \ . "\ %=%{(winnr('$')==1 || winnr('#')!=winnr()) ? '' : ''}"
+      \ . "%{tagbar#currenttag('[%s] ','')}"
+      \ . "[%{(&filetype!=''?&filetype.',':'').(&fenc!=''?&fenc:&enc).','.&ff.']'}"
+      \ . "%#CursorColumn#"
       \ . "%{printf('%'.(len(line('$'))+2).'d/%d',line('.'),line('$'))}"
-
+      
       "\ . "%{(&previewwindow?'[preview] ':'').expand('%:t')}"
       
 " For conceal.
