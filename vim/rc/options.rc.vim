@@ -46,6 +46,7 @@ syntax enable
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termcolors=16
+let g:solarized_termtrans = 1
 set background=dark
 colorscheme solarized
 
@@ -77,7 +78,8 @@ set noshowcmd
 " Set statusline.
 let &g:statusline=""
       \ . "%#LineNr#"
-      \ . "\  %f"
+      \ . "\ >>>"
+      \ . "\ %f"
       \ ."%#CursorColumn#"
       \ . "%m"
       \ . "%#LineNr#"
@@ -86,7 +88,8 @@ let &g:statusline=""
       \ . "[%{(&filetype!=''?&filetype.',':'').(&fenc!=''?&fenc:&enc).','.&ff.']'}"
       \ . "%#CursorColumn#"
       \ . "%{printf('%'.(len(line('$'))+2).'d/%d',line('.'),line('$'))}"
-      
+      \ ."   "
+
       "\ . "%{(&previewwindow?'[preview] ':'').expand('%:t')}"
       
 " For conceal.

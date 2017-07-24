@@ -2,11 +2,13 @@
 repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_source = '''
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ deoplete#mappings#manual_complete()
+source ~/.vim/rc/plugins/deoplete.rc.vim
+'''
+
+[[plugins]]
+repo = 'tacroe/unite-mark'
+hook_add = '''
+nnoremap <space>m :Unite mark<CR>
 '''
 
 [[plugins]]
@@ -29,6 +31,7 @@ hook_source = '''
 [[plugins]]
 repo = 'Shougo/unite.vim'
 depends = 'neomru.vim'
+depends = 'unite-mark'
 hook_source = 'source ~/.vim/rc/plugins/unite.rc.vim'
 hook_add = '''
 nnoremap <space>o :Unite outline<CR>
