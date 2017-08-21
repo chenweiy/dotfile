@@ -73,7 +73,7 @@ hook_add = 'nmap <space>w <Plug>(easymotion-bd-w)'
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
-on_map = {n = ['\cc', '\cu', '\c<space>']}
+on_map = {n = ['\']}
 
 [[plugins]]
 repo = 'tpope/vim-surround'
