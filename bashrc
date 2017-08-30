@@ -112,8 +112,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[00m\][\[\033[01;34m\]\w\[\033[00m\]]\$ '
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u \[\033[00m\][\[\033[01;34m\]\w\[\033[0;32m\]$(parse_git_branch)\[\033[00m\]]$ '
+
 
 
 export PATH=/home/chance/toolchain/gcc-arm-none-eabi-5_4-2016q2/bin:$PATH
@@ -121,9 +125,10 @@ export PATH=/home/chance/toolchain/gcc-arm-none-eabi-5_4-2016q2/bin:$PATH
 export CROSS_COMPILE=arm-none-eabi-
 alias tmux='TERM=screen-256color-bce tmux -2'
 
-alias vi='vim'
-export EDITOR=vim
-export CSCOPE_EDITOR=vim
+alias vi='nvim'
+alias vim='nvim'
+export EDITOR=nvim
+export CSCOPE_EDITOR=nvim
 #export CSCOPE_EDITOR=/usr/bin/vim
 
 # mark #####################################################
@@ -150,6 +155,8 @@ return 0
 
 complete -F _completemarks jj unmark
 
+#alias vim='/usr/bin/vim'
+
 # gtags ******************************************
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 #export GTAGSLABEL=ctags-exuberant
@@ -165,3 +172,7 @@ bind 'TAB:complete' # Tab 還是維持原樣，此行可以不用寫，這是預
 #export TERM="xterm-256color"
 export TERM=xterm-256color
 
+# include Z, yo
+. ~/z/z.sh
+
+export PATH=/home/chance/anaconda3/bin:$PATH
