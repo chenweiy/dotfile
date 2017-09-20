@@ -9,6 +9,11 @@ monitor halt
 set print pretty on
 
 # trace commands
+#
+# tail the log in another shell:
+# cd where/gdb/is/running
+# tail -f gdb.txt
+# ##############################
 #set trace-commands on
 #set logging on
 
@@ -17,7 +22,10 @@ echo Start running\n
 #source ~/FreeRTOS-GDB/src/FreeRTOS.py
 
 b main
-c
+b __vDataAbort
+b __vPrefetchAbort
+b __vUndefAbort
+#c
 
 ####################################################################################
 #
@@ -26,7 +34,7 @@ c
 ####################################################################################
 
 define attach_cpu
-    target remote 192.168.17.149:2331
+    target remote 192.168.17.125:2331
     file ../../_build/Vienna/test_UART/test_UART.elf 
     monitor halt
     monitor regs
@@ -46,10 +54,10 @@ define saveconsole
     dump binary memory console.bin $consoleptr $consoleptr_end
 end
 
-define dataabort
-    set $cpsr = $spsr
-	set $PC = $lr
-    bt
+define dataAbort
+    set $pc = $lr
+    set $cpsr = 0x2000001F
+	monitor regs
 end
 
 # Command "freertos_show_threads"
@@ -71,26 +79,26 @@ define freertos_show_threads
 		set $task_list = pxReadyTasksLists
 		set $task_list_size = sizeof(pxReadyTasksLists)/sizeof(pxReadyTasksLists[0])
 
-		printf "\n[ pxReadyTasksLists[%d] ]\n", $task_list_size
+		printf "[ pxReadyTasksLists[%d] ]\n", $task_list_size
 		while ($idx < $task_list_size)
 			_freertos_show_thread_item $task_list[$idx]
 			set $idx = $idx + 1
 		end
 		
-		printf "\n[ xDelayedTaskList1:        %2d ]\n", xDelayedTaskList1.uxNumberOfItems
+		printf "[ xDelayedTaskList1:        %2d ]\n", xDelayedTaskList1.uxNumberOfItems
 		_freertos_show_thread_item xDelayedTaskList1
-		printf "\n[ xDelayedTaskList2:        %2d ]\n", xDelayedTaskList2.uxNumberOfItems
+		printf "[ xDelayedTaskList2:        %2d ]\n", xDelayedTaskList2.uxNumberOfItems
 		_freertos_show_thread_item xDelayedTaskList2
-		printf "\n[ xPendingReadyList:        %2d ]\n", xPendingReadyList.uxNumberOfItems
+		printf "[ xPendingReadyList:        %2d ]\n", xPendingReadyList.uxNumberOfItems
 		_freertos_show_thread_item xPendingReadyList
 		
-		printf "\n[ xSuspendedTaskList:       %2d ]\n", xSuspendedTaskList.uxNumberOfItems
+		printf "[ xSuspendedTaskList:       %2d ]\n", xSuspendedTaskList.uxNumberOfItems
 #		set $VAL_dbgFreeRTOSConfig_suspend = dbgFreeRTOSConfig_suspend_value
 #		if ($VAL_dbgFreeRTOSConfig_suspend != 0)
 			_freertos_show_thread_item xSuspendedTaskList
 #		end
 
-		printf "\n[ xTasksWaitingTermination: %2d ]\n", xTasksWaitingTermination.uxNumberOfItems
+		printf "[ xTasksWaitingTermination: %2d ]\n", xTasksWaitingTermination.uxNumberOfItems
 #		set $VAL_dbgFreeRTOSConfig_delete = dbgFreeRTOSConfig_delete_value
 #		if ($VAL_dbgFreeRTOSConfig_delete != 0)
 			_freertos_show_thread_item xTasksWaitingTermination
