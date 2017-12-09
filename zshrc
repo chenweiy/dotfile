@@ -102,3 +102,11 @@ export CSCOPE_EDITOR=vim
 
 eval "$(gdircolors ~/.dircolors-solarized)"
 alias ls='gls --color=auto'
+
+eval "$(fasd --init auto)"
+alias v='f -e vim'
+
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
+}
