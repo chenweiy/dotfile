@@ -3,14 +3,14 @@
 "
 set nu "number
 set cursorline 
-set mouse=a
+"set mouse=a
 set backspace=2 "enable delete for mac
 set fo-=r "close formatoptions -> not work ?
 set ai "autoindent
 set cindent "for c indent"
 
-"set clipboard=unnamedplus
-set clipboard=unnamed
+set clipboard+=unnamedplus
+"set clipboard+=unnamed
 
 " folding
 set foldmethod=indent
@@ -73,7 +73,7 @@ set laststatus=2
 " Height of command line.
 set cmdheight=1
 " Not show command on statusline.
-set noshowcmd
+"set noshowcmd
 
 " Set statusline.
 let &g:statusline=""
@@ -89,6 +89,8 @@ let &g:statusline=""
       \ . "%#CursorColumn#"
       \ . "%{printf('%'.(len(line('$'))+2).'d/%d',line('.'),line('$'))}"
       \ ."   "
+      \ . "%c"
+      \ ."   "
 
       "\ . "%{(&previewwindow?'[preview] ':'').expand('%:t')}"
       
@@ -96,3 +98,7 @@ let &g:statusline=""
 set conceallevel=2 concealcursor=niv
 
 
+"---------------------------------------------------------------------------
+" Syntax:
+"
+au BufReadPost,BufNewFile *.in set syntax=kconfig

@@ -23,6 +23,12 @@ let GtagsCscope_Quiet = 1
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
 #[[plugins]]
 #repo = 'vim-airline/vim-airline'
 #hook_add = '''
@@ -52,3 +58,7 @@ repo = 'Shougo/unite-outline'
 
 [[plugins]]
 repo = 'chemzqm/denite-git'
+
+[[plugins]]
+repo = 'octol/vim-cpp-enhanced-highlight'
+

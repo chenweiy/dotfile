@@ -60,28 +60,16 @@ let g:vimfiler_as_default_explorer = 1
 " Like Textmate icons.
 let g:vimfiler_tree_leaf_icon = ' '
 let g:vimfiler_tree_opened_icon = "▼"
-let g:vimfiler_tree_closed_icon = "▷"
-let g:vimfiler_file_icon = ' '
-let g:vimfiler_readonly_file_icon = '✗'
-let g:vimfiler_marked_file_icon = '✓'
+let g:vimfiler_tree_closed_icon = ">"
+let g:vimfiler_file_icon = '-'
+let g:vimfiler_readonly_file_icon = ' '
+let g:vimfiler_marked_file_icon = '*'
 '''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 on_map = {n = '<Plug>(easymotion-bd-w)'}
 hook_add = 'nmap <space>w <Plug>(easymotion-bd-w)'
-
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
-on_map = {n = ['\']}
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-on_map = {n = ['cs', 'ds', 'ys']}
-
-[[plugins]]
-repo = 'octol/vim-cpp-enhanced-highlight'
-on_ft = 'c'
 
 #[[plugins]]
 #repo = 'klen/python-mode'
