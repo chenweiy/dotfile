@@ -1,0 +1,16 @@
+#!/bin/bash
+function docker_alias() {
+    docker run -it --rm \
+        -v $(pwd):$1 -w $1 \
+        ${@:2}
+}
+
+function heydocker() {
+    docker_alias /wd  chianwei123/myubuntu \
+        ${@:1}
+}
+
+alias rtos='docker run -it -e "PATH=/root/toolchain/gcc-arm-none-eabi-5_4-vatics-20180503/bin:$PATH" --rm -v $(pwd):/wd -w /wd chianwei123/rtos'
+alias vim='docker_alias /wd chianwei123/myubuntu nvim'
+alias python='docker_alias /wd python python'
+alias python2="docker_alias /wd python:2.7 python"
