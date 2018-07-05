@@ -10,15 +10,15 @@ repo = 'Shougo/dein.vim'
 #  let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 # '''
 
-[[plugins]]
-repo = 'aceofall/gtags.vim'
-hook_add = '''
-set cscopetag
-set cscopeprg='gtags-cscope'
-let GtagsCscope_Auto_Load = 1
-let GtagsCscope_Auto_Map = 1
-let GtagsCscope_Quiet = 1
-'''
+#[[plugins]]
+#repo = 'aceofall/gtags.vim'
+#hook_add = '''
+#set cscopetag
+#set cscopeprg='gtags-cscope'
+#let GtagsCscope_Auto_Load = 1
+#let GtagsCscope_Auto_Map = 1
+#let GtagsCscope_Quiet = 1
+#'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
