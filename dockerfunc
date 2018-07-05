@@ -10,7 +10,18 @@ function heydocker() {
         ${@:1}
 }
 
+# myubuntu
 alias rtos='docker run -it -e "PATH=/root/toolchain/gcc-arm-none-eabi-5_4-vatics-20180503/bin:$PATH" --rm -v $(pwd):/wd -w /wd chianwei123/rtos'
-alias vim='docker_alias /wd chianwei123/myubuntu nvim'
+alias vi='docker_alias /wd chianwei123/myubuntu nvim'
+alias gtags='docker_alias /wd chianwei123/myubuntu gtags'
+alias global='docker_alias /wd chianwei123/myubuntu global'
+
 alias python='docker_alias /wd python python'
 alias python2="docker_alias /wd python:2.7 python"
+
+# tags
+function gentags() {
+	global -uv
+	global -t . > tags
+}
+
