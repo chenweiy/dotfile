@@ -28,5 +28,6 @@ nmap <space>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 "nmap <space>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 
 if has('nvim')
-nmap <space>` :terminal<CR>
+"nmap <space>` :terminal<CR>
+"tnoremap <ESC>   <C-\><C-n>
 endif

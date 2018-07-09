@@ -26,6 +26,10 @@ hook_source = '''
 
   smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
         \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+  let g:neosnippet#enable_completed_snippet = 1
+  let g:neosnippet#expand_word_boundary = 1
+  autocmd MyAutoCmd CompleteDone * call neosnippet#complete_done()
 '''
 
 [[plugins]]
@@ -46,7 +50,6 @@ hook_add = '''
 nnoremap <space>p :Denite -mode=normal file_mru file<CR>
 nnoremap <space>b :Denite -mode=normal buffer<CR>
 nnoremap <space>x :Denite -mode=normal grep<CR>
-
 '''
 
 [[plugins]]
@@ -95,4 +98,15 @@ repo = 'Rykka/InstantRst'
 on_ft = 'rst'
 hook_source = '''
 let g:riv_disable_folding = 1
+'''
+
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+on_cmd = 'Deol'
+on_source = 'denite.nvim'
+hook_add = '''
+  nnoremap <space>` :<C-u>call deol#new({'command': 'zsh'})<CR>
+'''
+hook_source = '''
+  let g:deol#prompt_pattern = '\w*%'
 '''
