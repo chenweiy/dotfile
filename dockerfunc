@@ -1,25 +1,64 @@
 #!/bin/bash
 function docker_alias() {
     docker run -it --rm \
-        -v $(pwd):$1 -w $1 \
+        -v $(pwd):$1:cached -w $1 \
         ${@:2}
 }
 
-function heydocker() {
-    docker_alias /wd  chianwei123/myubuntu \
-        ${@:1}
+#function heydocker() {
+#    docker_alias /wd  chianwei123/myubuntu \
+#        ${@:1}
+#}
+
+########################################
+# vtx
+########################################
+alias vtx='docker run -it --rm -v $(pwd):/wd:cached -w /wd vtx'
+
+# scp
+function hey-scp() {
+	scp $1 chance.yang@172.17.0.6:/tftpboot/chance/$2
 }
 
-# myubuntu
+# kernel
+alias vtx-kernel='docker run -it -d --name "vtx-kernel" -v ~/workspace/vatics/bsp/linux/kernel/stable:/wd:cached -w /wd vtx'
+
+function hey-kernel() {
+	docker exec -it vtx-kernel bash -c "source ~/.bashrc;$@"
+}
+
+function hey-k-driver() {
+	docker exec -it vtx-kernel bash -c "source ~/.bashrc;make $1"
+	hey-scp $1 usb
+}
+
+# sdk
+alias vtx-sdk='docker run -it -d --name "vtx-sdk" -v ~/workspace/vatics/Application/Vienna:/wd:cached -w /wd vtx'
+
+function hey-sdk() {
+	docker exec -it vtx-sdk bash -c "source ~/.bashrc;$@"
+}
+
+# ceva
+alias vtx-ceva='docker run -it -d --name "vtx-ceva" -v ~/workspace/vatics/bsp/ceva/ceva_mm3101:/wd:cached -w /wd vtx-ceva'
+
+function hey-ceva() {
+	docker exec -it vtx-ceva bash -c "source ~/.bashrc;cd ./infrastructure/FreeRTOS_8.1.2/VP_EMU; make $1"
+	hey-scp ~/workspace/vatics/bsp/ceva/ceva_mm3101/infrastructure/FreeRTOS_8.1.2/VP_EMU/FreeRTOS.bin ceva/testm/FreeRTOS.bin
+}
+
+# rtos
 alias rtos='docker run -it -e "PATH=/root/toolchain/gcc-arm-none-eabi-5_4-vatics-20180503/bin:$PATH" --rm -v $(pwd):/wd -w /wd chianwei123/rtos'
+
+#######################################################
 #alias gtags='docker_alias /wd chianwei123/myubuntu gtags'
 #alias global='docker_alias /wd chianwei123/myubuntu global'
 #alias python='docker_alias /wd python python'
 #alias python2="docker_alias /wd python:2.7 python"
 
 # tags
-function gentags() {
-	global -uv
-	global -t . > tags
-}
+#function gentags() {
+#	global -uv
+#	global -t . > tags
+#}
 
