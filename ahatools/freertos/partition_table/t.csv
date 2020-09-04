@@ -1,0 +1,6 @@
+# VATICS-RTOS Partition Table
+# Name Type SubType Offset Size Flags
+uboot_env data uboot_env 0x200000 0x100 
+factory app factory 0x10000 1M 
+spiffs_0 data spiffs_0 0xa00000 0x200000
+spiffs_1 data spiffs_1 0xc00000 0x200000

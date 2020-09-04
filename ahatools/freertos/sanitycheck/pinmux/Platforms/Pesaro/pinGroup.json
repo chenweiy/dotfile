@@ -1,0 +1,254 @@
+{
+    "arm926u": {
+        "ARM926U_PAD": 0
+    }, 
+    "gmac": {
+        "GMAC_PAD": 0
+    }, 
+    "gmac_ref_clk": {
+        "GMAC_REF_CLK": 0
+    }, 
+    "gmac_tx_clk": {
+        "GMAC_TX_CLK": 0
+    }, 
+    "hdmitc": {
+        "HDMITC_IO_CEC": 0, 
+        "HDMITC_IO_DDCSCL": 0, 
+        "HDMITC_IO_DDCSDA": 0
+    }, 
+    "i2c0_pos_0": {
+        "I2CC_0_IO_SCL": 0, 
+        "I2CC_0_IO_SDA": 0
+    }, 
+    "i2c0_pos_1": {
+        "GPIOC_0_IO_DATA_13": 2, 
+        "GPIOC_0_IO_DATA_14": 2
+    }, 
+    "i2c1": {
+        "VIC_I_DEV_0_DATA_14": 2, 
+        "VIC_I_DEV_0_DATA_15": 2
+    }, 
+    "i2c2": {
+        "MSHC_1_IO_DATA_0": 2, 
+        "MSHC_1_IO_DATA_1": 2
+    }, 
+    "i2ssc_ext_master": {
+        "I2SSC_I_RXD": 0, 
+        "I2SSC_I_RX_BCLK": 0, 
+        "I2SSC_I_RX_WS": 0, 
+        "I2SSC_I_TX_BCLK": 0, 
+        "I2SSC_I_TX_WS": 0, 
+        "I2SSC_O_MCLK": 0, 
+        "I2SSC_O_TXD": 0
+    }, 
+    "i2ssc_ext_slave": {
+        "I2SSC_I_RXD": 0, 
+        "I2SSC_I_RX_BCLK": 0, 
+        "I2SSC_I_RX_WS": 0, 
+        "I2SSC_I_TX_BCLK": 0, 
+        "I2SSC_I_TX_WS": 0, 
+        "I2SSC_O_TXD": 0
+    }, 
+    "irdac": {
+        "IRDAC_I_SDA": 0
+    }, 
+    "modem_pos_0": {
+        "UARTC_0_I_SDA": 0, 
+        "UARTC_0_O_SDA": 0, 
+        "UARTC_1_I_SDA": 0, 
+        "UARTC_1_O_SDA": 0, 
+        "UARTC_2_I_SDA": 0, 
+        "UARTC_2_O_SDA": 0, 
+        "UARTC_3_I_SDA": 0, 
+        "UARTC_3_O_SDA": 0
+    }, 
+    "modem_pos_1": {
+        "I2SSC_I_RX_BCLK": 2, 
+        "I2SSC_I_TX_BCLK": 2, 
+        "I2SSC_O_MCLK": 2, 
+        "SYS_O_MON_CLK": 2
+    }, 
+    "monitor": {
+        "SYS_O_MON_CLK": 0
+    }, 
+    "mshc0": {
+        "MSHC_0_IO_CMD": 0, 
+        "MSHC_0_IO_DATA_0": 0, 
+        "MSHC_0_IO_DATA_1": 0, 
+        "MSHC_0_IO_DATA_2": 0, 
+        "MSHC_0_IO_DATA_3": 0, 
+        "MSHC_0_I_CARD_nDETECT": 0, 
+        "MSHC_0_O_TX_CLK": 0
+    }, 
+    "mshc0_pos_0": {
+        "GPIOC_0_IO_DATA_15": 1
+    }, 
+    "mshc0_pos_1": {
+        "HDMITC_IO_CEC": 1
+    }, 
+    "mshc1": {
+        "MSHC_1_IO_CMD": 0, 
+        "MSHC_1_IO_DATA_0": 0, 
+        "MSHC_1_IO_DATA_1": 0, 
+        "MSHC_1_IO_DATA_2": 0, 
+        "MSHC_1_IO_DATA_3": 0, 
+        "MSHC_1_O_TX_CLK": 0
+    }, 
+    "nfc": {
+        "NFC_IO_DATA_0": 0, 
+        "NFC_IO_DATA_1": 0, 
+        "NFC_IO_DATA_2": 0, 
+        "NFC_IO_DATA_3": 0, 
+        "NFC_IO_DATA_4": 0, 
+        "NFC_IO_DATA_5": 0, 
+        "NFC_IO_DATA_6": 0, 
+        "NFC_IO_DATA_7": 0, 
+        "NFC_I_nRB": 0, 
+        "NFC_O_ALE": 0, 
+        "NFC_O_CLE": 0, 
+        "NFC_O_nCE": 0, 
+        "NFC_O_nRE": 0, 
+        "NFC_O_nWE": 0, 
+        "NFC_O_nWP": 0
+    }, 
+    "ssic_pos_0": {
+        "SSIC_I_RXD": 0, 
+        "SSIC_O_BCLK": 0, 
+        "SSIC_O_TXD": 0, 
+        "SSIC_O_nSEL_0": 0, 
+        "SSIC_O_nSEL_1": 0
+    }, 
+    "ssic_pos_1": {
+        "VIC_I_DEV_0_DATA_12": 1, 
+        "VIC_I_DEV_0_DATA_13": 1, 
+        "VIC_I_DEV_0_DATA_14": 1, 
+        "VIC_I_DEV_0_DATA_15": 1
+    }, 
+    "uart0_pos_0": {
+        "UARTC_0_I_SDA": 0, 
+        "UARTC_0_O_SDA": 0
+    }, 
+    "uart0_pos_1": {
+        "I2SSC_I_RX_BCLK": 2, 
+        "I2SSC_O_MCLK": 2
+    }, 
+    "uart1_pos_0": {
+        "UARTC_1_I_SDA": 0, 
+        "UARTC_1_O_SDA": 0
+    }, 
+    "uart1_pos_1": {
+        "HDMITC_IO_DDCSCL": 2, 
+        "HDMITC_IO_DDCSDA": 2
+    }, 
+    "uart2_pos_0": {
+        "UARTC_2_I_SDA": 0, 
+        "UARTC_2_O_SDA": 0
+    }, 
+    "uart2_pos_1": {
+        "I2SSC_I_RXD": 2, 
+        "I2SSC_O_TXD": 2
+    }, 
+    "uart3_pos_0": {
+        "UARTC_3_I_SDA": 0, 
+        "UARTC_3_O_SDA": 0
+    }, 
+    "uart3_pos_1": {
+        "NFC_I_nRB": 2, 
+        "NFC_O_nRE": 2
+    }, 
+    "vic_dev0_sec0": {
+        "VIC_DEFAULT": 0
+    }, 
+    "vic_dev0_sec1": {
+        "VIC_I_DEV_0_HSYNC": 0, 
+        "VIC_I_DEV_0_VSYNC": 0
+    }, 
+    "vic_dev0_sec2": {
+        "VIC_I_DEV_0_DATA_12": 0, 
+        "VIC_I_DEV_0_DATA_13": 0, 
+        "VIC_I_DEV_0_DATA_14": 0, 
+        "VIC_I_DEV_0_DATA_15": 0
+    }, 
+    "vic_dev1_sec0": {
+        "GPIOC_0_IO_DATA_0": 1, 
+        "GPIOC_0_IO_DATA_1": 1, 
+        "GPIOC_0_IO_DATA_2": 1, 
+        "GPIOC_0_IO_DATA_3": 1, 
+        "GPIOC_0_IO_DATA_4": 1, 
+        "GPIOC_0_IO_DATA_5": 1, 
+        "GPIOC_0_IO_DATA_6": 1, 
+        "GPIOC_0_IO_DATA_7": 1, 
+        "GPIOC_0_IO_DATA_8": 1
+    }, 
+    "vic_dev1_sec1": {
+        "GPIOC_0_IO_DATA_13": 1, 
+        "GPIOC_0_IO_DATA_14": 1
+    }, 
+    "vic_dev1_sec2": {
+        "GPIOC_0_IO_DATA_10": 1, 
+        "GPIOC_0_IO_DATA_11": 1, 
+        "GPIOC_0_IO_DATA_12": 1, 
+        "GPIOC_0_IO_DATA_9": 1
+    }, 
+    "vic_ref_clk": {
+        "VIC_REF_CLK": 0
+    }, 
+    "voc_16bit": {
+        "VOC_O_BLANK": 0, 
+        "VOC_O_CLK": 0, 
+        "VOC_O_DATA_0": 0, 
+        "VOC_O_DATA_1": 0, 
+        "VOC_O_DATA_10": 0, 
+        "VOC_O_DATA_11": 0, 
+        "VOC_O_DATA_12": 0, 
+        "VOC_O_DATA_13": 0, 
+        "VOC_O_DATA_14": 0, 
+        "VOC_O_DATA_15": 0, 
+        "VOC_O_DATA_2": 0, 
+        "VOC_O_DATA_3": 0, 
+        "VOC_O_DATA_4": 0, 
+        "VOC_O_DATA_5": 0, 
+        "VOC_O_DATA_6": 0, 
+        "VOC_O_DATA_7": 0, 
+        "VOC_O_DATA_8": 0, 
+        "VOC_O_DATA_9": 0, 
+        "VOC_O_HSYNC": 0, 
+        "VOC_O_VSYNC": 0
+    }, 
+    "voc_24bit": {
+        "UARTC_0_I_SDA": 1, 
+        "UARTC_0_O_SDA": 1, 
+        "UARTC_1_I_SDA": 1, 
+        "UARTC_1_O_SDA": 1, 
+        "UARTC_2_I_SDA": 1, 
+        "UARTC_2_O_SDA": 1, 
+        "UARTC_3_I_SDA": 1, 
+        "UARTC_3_O_SDA": 1, 
+        "VOC_O_BLANK": 0, 
+        "VOC_O_CLK": 0, 
+        "VOC_O_DATA_0": 0, 
+        "VOC_O_DATA_1": 0, 
+        "VOC_O_DATA_10": 0, 
+        "VOC_O_DATA_11": 0, 
+        "VOC_O_DATA_12": 0, 
+        "VOC_O_DATA_13": 0, 
+        "VOC_O_DATA_14": 0, 
+        "VOC_O_DATA_15": 0, 
+        "VOC_O_DATA_2": 0, 
+        "VOC_O_DATA_3": 0, 
+        "VOC_O_DATA_4": 0, 
+        "VOC_O_DATA_5": 0, 
+        "VOC_O_DATA_6": 0, 
+        "VOC_O_DATA_7": 0, 
+        "VOC_O_DATA_8": 0, 
+        "VOC_O_DATA_9": 0, 
+        "VOC_O_HSYNC": 0, 
+        "VOC_O_VSYNC": 0
+    }, 
+    "voc_ref_clk": {
+        "VOC_I_REF_CLK": 0
+    }, 
+    "wdt": {
+        "WDT_PAD": 0
+    }
+}

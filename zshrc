@@ -127,4 +127,6 @@ export CSCOPE_EDITOR=vim
 #   echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}"
 # }
 
-source ~/.dockerfunc
+# source ~/.dockerfunc
+
+function x() {scp $1 chance.yang@172.17.0.6:/tftpboot/chance/$1}

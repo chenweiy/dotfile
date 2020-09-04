@@ -1,0 +1,380 @@
+{
+    "ca5u_p_dbg": {
+        "CA5U_IB_DBG_TCK": 0, 
+        "CA5U_IB_DBG_TDI": 0, 
+        "CA5U_IB_DBG_TMS": 0, 
+        "CA5U_IB_DBG_nTRST": 0, 
+        "CA5U_OB_DBG_TDO": 0
+    }, 
+    "ca5u_s_dbg": {
+        "CA5U_IB_DBG_TCK": 1, 
+        "CA5U_IB_DBG_TMS": 1
+    }, 
+    "ddr_sf_state": {
+        "SYS_O_MON_CLK": 3
+    }, 
+    "ddr_tst_pad": {
+        "UARTC_4_IB_SDA": 3, 
+        "UARTC_4_OB_SDA": 3
+    }, 
+    "eqosc_ref_clk": {
+        "EQOSC_O_REF_CLK": 0
+    }, 
+    "eqosc_rx_clk": {
+        "EQOSC_IB_RX_CLK": 0
+    }, 
+    "eqosc_sec0": {
+        "EQOSC_IB_RXDV": 0, 
+        "EQOSC_IB_RXD_0": 0, 
+        "EQOSC_IB_RXD_1": 0, 
+        "EQOSC_IB_RXER": 0, 
+        "EQOSC_OB_TXD_0": 0, 
+        "EQOSC_OB_TXD_1": 0, 
+        "EQOSC_OB_TXEN": 0
+    }, 
+    "eqosc_sec1": {
+        "EQOSC_IO_MD": 0, 
+        "EQOSC_OB_MDC": 0
+    }, 
+    "eqosc_sec2": {
+        "EQOSC_IB_RXD_2": 0, 
+        "EQOSC_IB_RXD_3": 0, 
+        "EQOSC_OB_TXD_2": 0, 
+        "EQOSC_OB_TXD_3": 0
+    }, 
+    "eqosc_sec3": {
+        "EQOSC_IB_COL": 0, 
+        "EQOSC_IB_CRS": 0
+    }, 
+    "eqosc_tx_in_clk": {
+        "EQOSC_IB_TX_CLK": 0
+    }, 
+    "eqosc_tx_out_clk": {
+        "EQOSC_O_TX_CLK": 0
+    }, 
+    "i2c0": {
+        "I2CC_0_IO_SCL": 0, 
+        "I2CC_0_IO_SDA": 0
+    }, 
+    "i2c1_pos0": {
+        "VIC_IB_DEV_0_HSYNC": 1, 
+        "VIC_IB_DEV_0_VSYNC": 1
+    }, 
+    "i2c1_pos1": {
+        "VIC_IB_DEV_0_DATA_14": 1, 
+        "VIC_IB_DEV_0_DATA_15": 1
+    }, 
+    "i2c2": {
+        "GPIOC_0_IO_DATA_15": 2, 
+        "GPIOC_0_IO_DATA_16": 2
+    }, 
+    "i2s_mclk": {
+        "I2SSC_O_MCLK": 0
+    }, 
+    "i2s_rx": {
+        "I2SSC_I_RXD": 0, 
+        "I2SSC_I_RX_BCLK": 0, 
+        "I2SSC_I_RX_WS": 0
+    }, 
+    "i2s_tx": {
+        "I2SSC_O_TXD": 0
+    }, 
+    "i2s_tx_master": {
+        "I2SSC_IO_TX_BCLK": 0, 
+        "I2SSC_IO_TX_WS": 0
+    }, 
+    "irda": {
+        "IRDAC_IB_SDA": 0
+    }, 
+    "mm3101u_dbg": {
+        "MM3101_I_DBG_TCK": 0, 
+        "MM3101_I_DBG_TDI": 0, 
+        "MM3101_I_DBG_TMS": 0, 
+        "MM3101_I_DBG_nRST": 0, 
+        "MM3101_O_DBG_TDO": 0
+    }, 
+    "mshc0_sec0": {
+        "MSHC_0_IB_CARD_WRITE_PRT": 0, 
+        "MSHC_0_IB_CARD_nDETECT": 0, 
+        "MSHC_0_IO_CMD": 0, 
+        "MSHC_0_IO_DATA_0": 0, 
+        "MSHC_0_IO_DATA_1": 0, 
+        "MSHC_0_IO_DATA_2": 0, 
+        "MSHC_0_IO_DATA_3": 0, 
+        "MSHC_0_O_TX_CLK": 0
+    }, 
+    "mshc0_sec1": {
+        "MSHC_1_IO_DATA_0": 1, 
+        "MSHC_1_IO_DATA_1": 1, 
+        "MSHC_1_IO_DATA_2": 1, 
+        "MSHC_1_IO_DATA_3": 1
+    }, 
+    "mshc1": {
+        "MSHC_1_IO_CMD": 0, 
+        "MSHC_1_IO_DATA_0": 0, 
+        "MSHC_1_IO_DATA_1": 0, 
+        "MSHC_1_IO_DATA_2": 0, 
+        "MSHC_1_IO_DATA_3": 0, 
+        "MSHC_1_O_TX_CLK": 0
+    }, 
+    "nfc": {
+        "MM3101_I_DBG_TCK": 1, 
+        "MM3101_I_DBG_TDI ": 1, 
+        "MM3101_I_DBG_TMS": 1, 
+        "MM3101_I_DBG_nRST": 1, 
+        "MM3101_O_DBG_TDO": 1, 
+        "SSIC_0_I_RXD": 1, 
+        "SSIC_0_O_BCLK": 1, 
+        "SSIC_0_O_TXD": 1, 
+        "SSIC_0_O_nSEL_0": 1, 
+        "SSIC_0_O_nSEL_1": 1, 
+        "SSIC_1_I_RXD": 1, 
+        "SSIC_1_O_BCLK": 1, 
+        "SSIC_1_O_TXD": 1, 
+        "SSIC_1_O_nSEL_0": 1, 
+        "SSIC_1_O_nSEL_1": 1
+    }, 
+    "ssic0": {
+        "SSIC_0_I_RXD": 0, 
+        "SSIC_0_O_BCLK": 0, 
+        "SSIC_0_O_TXD": 0 
+    }, 
+    "ssic1": {
+        "SSIC_1_I_RXD": 0, 
+        "SSIC_1_O_BCLK": 0, 
+        "SSIC_1_O_TXD": 0 
+    }, 
+    "ssic2": {
+        "VIC_IB_DEV_0_DATA_13": 2, 
+        "VIC_IB_DEV_0_DATA_14": 2, 
+        "VIC_IB_DEV_0_DATA_15": 2
+    }, 
+    "ssic3": {
+        "GPIOC_0_IO_DATA_13": 3, 
+        "GPIOC_0_IO_DATA_15": 3, 
+        "GPIOC_0_IO_DATA_16": 3
+    }, 
+    "sysc_base_clk": {
+        "SYS_O_BASE_CLK": 0
+    }, 
+    "sysc_monitor_clk": {
+        "SYS_O_MON_CLK": 0
+    }, 
+    "uart0_pos0_sec0": {
+        "UARTC_0_IB_SDA": 0, 
+        "UARTC_0_OB_SDA": 0
+    }, 
+    "uart0_pos0_sec1": {
+        "UARTC_2_IB_SDA": 2, 
+        "UARTC_2_OB_SDA": 2
+    }, 
+    "uart0_pos1_sec0": {
+        "GPIOC_0_IO_DATA_0": 2, 
+        "GPIOC_0_IO_DATA_1": 2
+    }, 
+    "uart0_pos1_sec1": {
+        "GPIOC_0_IO_DATA_2": 3, 
+        "GPIOC_0_IO_DATA_3": 3
+    }, 
+    "uart0_pos2_sec0": {
+        "CA5U_IB_DBG_TCK": 2, 
+        "CA5U_IB_DBG_TMS": 2
+    }, 
+    "uart0_pos2_sec1": {
+        "CA5U_IB_DBG_TDI": 3, 
+        "CA5U_IB_DBG_nTRST": 3
+    }, 
+    "uart1_pos0_sec0": {
+        "UARTC_1_IB_SDA": 0, 
+        "UARTC_1_OB_SDA": 0
+    }, 
+    "uart1_pos0_sec1": {
+        "UARTC_3_IB_SDA": 2, 
+        "UARTC_3_OB_SDA": 2
+    }, 
+    "uart1_pos1_sec0": {
+        "GPIOC_0_IO_DATA_4": 2, 
+        "GPIOC_0_IO_DATA_5": 2
+    }, 
+    "uart1_pos1_sec1": {
+        "GPIOC_0_IO_DATA_6": 3, 
+        "GPIOC_0_IO_DATA_7": 3
+    }, 
+    "uart1_pos2_sec0": {
+        "CA5U_OB_DBG_TDO": 2, 
+        "MM3101_I_DBG_nRST": 2
+    }, 
+    "uart1_pos2_sec1": {
+        "MM3101_I_DBG_TCK": 3, 
+        "MM3101_I_DBG_TDI": 3
+    }, 
+    "uart2_pos0": {
+        "UARTC_2_IB_SDA": 0, 
+        "UARTC_2_OB_SDA": 0
+    }, 
+    "uart2_pos1": {
+        "GPIOC_0_IO_DATA_2": 2, 
+        "GPIOC_0_IO_DATA_3": 2
+    }, 
+    "uart2_pos2": {
+        "CA5U_IB_DBG_TDI": 2, 
+        "CA5U_IB_DBG_nTRST": 2
+    }, 
+    "uart3_pos0": {
+        "UARTC_3_IB_SDA": 0, 
+        "UARTC_3_OB_SDA": 0
+    }, 
+    "uart3_pos1": {
+        "GPIOC_0_IO_DATA_6": 2, 
+        "GPIOC_0_IO_DATA_7": 2
+    }, 
+    "uart3_pos2": {
+        "MM3101_I_DBG_TCK": 2, 
+        "MM3101_I_DBG_TDI": 2
+    }, 
+    "uart4_pos0": {
+        "UARTC_4_IB_SDA": 0, 
+        "UARTC_4_OB_SDA": 0
+    }, 
+    "uart4_pos1": {
+        "GPIOC_0_IO_DATA_10": 2, 
+        "GPIOC_0_IO_DATA_9": 2
+    }, 
+    "uart4_pos2": {
+        "MM3101_I_DBG_TMS": 2, 
+        "MM3101_O_DBG_TDO": 2
+    }, 
+    "usb_vbus": {
+        "IRDAC_IB_SDA": 2
+    }, 
+    "vic_dev0_sec0": {
+        "VIC_IB_DEV_0_CLK": 0, 
+        "VIC_IB_DEV_0_DATA_0": 0, 
+        "VIC_IB_DEV_0_DATA_1": 0, 
+        "VIC_IB_DEV_0_DATA_2": 0, 
+        "VIC_IB_DEV_0_DATA_3": 0, 
+        "VIC_IB_DEV_0_DATA_4": 0, 
+        "VIC_IB_DEV_0_DATA_5": 0, 
+        "VIC_IB_DEV_0_DATA_6": 0, 
+        "VIC_IB_DEV_0_DATA_7": 0
+    }, 
+    "vic_dev0_sec1": {
+        "VIC_IB_DEV_0_HSYNC": 0, 
+        "VIC_IB_DEV_0_VSYNC": 0
+    }, 
+    "vic_dev0_sec2": {
+        "VIC_IB_DEV_0_DATA_8": 0, 
+        "VIC_IB_DEV_0_DATA_9": 0
+    }, 
+    "vic_dev0_sec3": {
+        "VIC_IB_DEV_0_DATA_10": 0, 
+        "VIC_IB_DEV_0_DATA_11": 0
+    }, 
+    "vic_dev0_sec4": {
+        "VIC_IB_DEV_0_DATA_12": 0, 
+        "VIC_IB_DEV_0_DATA_13": 0
+    }, 
+    "vic_dev0_sec5": {
+        "VIC_IB_DEV_0_DATA_14": 0, 
+        "VIC_IB_DEV_0_DATA_15": 0
+    }, 
+    "vic_dev1_sec0": {
+        "GPIOC_0_IO_DATA_0": 1, 
+        "GPIOC_0_IO_DATA_1": 1, 
+        "GPIOC_0_IO_DATA_2": 1, 
+        "GPIOC_0_IO_DATA_3": 1, 
+        "GPIOC_0_IO_DATA_4": 1, 
+        "GPIOC_0_IO_DATA_5": 1, 
+        "GPIOC_0_IO_DATA_6": 1, 
+        "GPIOC_0_IO_DATA_7": 1, 
+        "GPIOC_0_IO_DATA_8": 1
+    }, 
+    "vic_dev1_sec1": {
+        "GPIOC_0_IO_DATA_17": 0, 
+        "GPIOC_0_IO_DATA_18": 0
+    }, 
+    "vic_dev1_sec2": {
+        "GPIOC_0_IO_DATA_10": 0, 
+        "GPIOC_0_IO_DATA_9": 0
+    }, 
+    "vic_dev1_sec3": {
+        "GPIOC_0_IO_DATA_11": 0, 
+        "GPIOC_0_IO_DATA_12": 0
+    }, 
+    "vic_dev1_sec4": {
+        "GPIOC_0_IO_DATA_13": 0, 
+        "GPIOC_0_IO_DATA_14": 0
+    }, 
+    "vic_dev1_sec5": {
+        "GPIOC_0_IO_DATA_15": 0, 
+        "GPIOC_0_IO_DATA_16": 0
+    }, 
+    "vic_ref_clk": {
+        "VIC_O_REF_CLK": 0
+    }, 
+    "voc_clk_pos0": {
+        "EQOSC_O_REF_CLK": 1
+    }, 
+    "voc_clk_pos1": {
+        "UARTC_0_IB_SDA": 1
+    }, 
+    "voc_sec0_pos0": {
+        "EQOSC_IO_MD": 1, 
+        "EQOSC_OB_MDC": 1
+    }, 
+    "voc_sec0_pos1": {
+        "EQOSC_IB_COL": 2, 
+        "EQOSC_IB_CRS": 2
+    }, 
+    "voc_sec1": {
+        "EQOSC_IB_RXD_2": 1, 
+        "EQOSC_IB_RX_CLK": 1
+    }, 
+    "voc_sec10": {
+        "UARTC_3_IB_SDA": 1, 
+        "UARTC_3_OB_SDA": 1
+    }, 
+    "voc_sec11": {
+        "UARTC_1_IB_SDA": 1, 
+        "UARTC_1_OB_SDA": 1
+    }, 
+    "voc_sec12": {
+        "UARTC_2_IB_SDA": 1, 
+        "UARTC_2_OB_SDA": 1
+    }, 
+    "voc_sec13": {
+        "UARTC_0_OB_SDA": 1
+    }, 
+    "voc_sec2": {
+        "EQOSC_IB_RXD_3": 1, 
+        "EQOSC_IB_TX_CLK": 1
+    }, 
+    "voc_sec3": {
+        "EQOSC_OB_TXD_2": 1, 
+        "EQOSC_OB_TXD_3": 1
+    }, 
+    "voc_sec4": {
+        "EQOSC_IB_COL": 1, 
+        "EQOSC_IB_CRS": 1
+    }, 
+    "voc_sec5": {
+        "EQOSC_IB_RXDV": 1, 
+        "EQOSC_IB_RXER": 1
+    }, 
+    "voc_sec6": {
+        "EQOSC_IB_RXD_0": 1, 
+        "EQOSC_IB_RXD_1": 1
+    }, 
+    "voc_sec7": {
+        "EQOSC_OB_TXD_0": 1, 
+        "EQOSC_OB_TXEN": 1
+    }, 
+    "voc_sec8": {
+        "EQOSC_OB_TXD_1": 1, 
+        "EQOSC_O_TX_CLK": 1
+    }, 
+    "voc_sec9": {
+        "UARTC_4_IB_SDA": 1, 
+        "UARTC_4_OB_SDA": 1
+    }
+}
