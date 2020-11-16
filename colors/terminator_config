@@ -1,0 +1,30 @@
+[global_config]
+  focus = system
+  title_font = ETBembo Bold 10
+  title_transmit_bg_color = "#98c379"
+  title_use_system_font = False
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282c34"
+    cursor_color = "#abb2bf"
+    font = Source Code Pro 12
+    foreground_color = "#abb2bf"
+    palette = "#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#abb2bf:#282c34:#e06c75:#98c379:#e5c07b:#61afef:#c678dd:#56b6c2:#abb2bf"
+    use_system_font = False
+  [[theone]]
+    background_color = "#282c34"
+    cursor_color = "#abb2bf"
+    font = Source Code Pro 12
+    foreground_color = "#abb2bf"
+    palette = "#282c34:#e06c75:#98c379:#e5c07B:#61afef:#c678dd:#56b6c2:#abb2bf:#282c34:#e06c75:#98c379:#e5c07B:#61afef:#c678dd:#56b6c2:#abb2bf"
+    use_system_font = False
